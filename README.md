@@ -20,11 +20,11 @@ Customize & Run all the published Docker .NET application templates and many oth
 **Table of Contents**  
 
 - [A Step by Step Guide for Dockerizing a .NET Application that Connects to SQLite, PostgreSQL and Microsoft SQL Server](#a-step-by-step-guide-for-dockerizing-a-net-application-that-connects-to-sqlite-postgresql-and-microsoft-sql-server)
-	- [.NET with Embedded-SQLite)](#net-with-embedded-sqlite)
+	- [.NET with Embedded-SQLite](#net-with-embedded-sqlite)
 	- [2-Tier .NET (Nginx-Embedded-SQLite)](#2-tier-net-nginx-embedded-sqlite)
 	- [2-Tier .NET (Apache HTTP-Embedded-SQLite)](#2-tier-net-apache-http-embedded-sqlite)
 	- [2-Tier .NET with PostgreSQL](#2-tier-net-with-postgresql)
-	- [3-Tier .NET (Nginx-.NET-PostgreSQL)](#3-tier-net-nginx-net-postgresq)
+	- [3-Tier .NET (Nginx-.NET-PostgreSQL)](#3-tier-net-nginx-net-postgresql)
 	- [3-Tier .NET (Apache HTTP-.NET-PostgreSQL)](#3-tier-net-apache-http-net-postgresql)
 	- [.NET Connecting to MS SQL Server](#net-connecting-to-ms-sql-server)
 	- [2-Tier .NET (Nginx Connecting to MS SQL Server)](#2-tier-net-nginx-connecting-to-ms-sql-server)
@@ -343,7 +343,13 @@ Here is a list of supported environment variable values:
 
 ### Plug-ins to Configure Web Servers and .NET Servers at **Request Time & Post-Provision**
 
-Across all these application templates, you will notice that some of the containers are invoking BASH script plug-ins at different life-cycle stages in order to configure the container.
+HyperForm simplifies the containerization of enterprise applications through an advanced application composition framework that extends Docker Compose supporting
+-   **advanced plug-ins** that can be invoked at more than 20 different lifecycle stages to enable service discovery, on-the-fly containerization and application storage automation, and
+-   **data injection** to support complex application dependencies.
+
+Across all these application templates, you will notice that some of the containers are invoking plug-ins at different life-cycle stages in order to configure the container.
+ 
+The Plug-ins framework, which relies on custom scripts that can be written in BASH, PowerShell, Perl, Ruby or Python, enables advanced application deployment and in this case, facilitates both service discovery for the web servers (Nginx and Apache HTTP) and automatic database initialization for the .NET application.
 
 These plug-ins can be created by navigating to **Blueprints > Plug-ins**. Once the BASH script is provided, the HyperForm agent will execute this script **inside the container**. A user can specify arguments that can be overridden at request time and post-provision. Anything preceded by the **$** sign is considered an argument -- for example, **$zip_url** can be an argument that allows developers to specify the download URL for a ZIP file. This can be overridden at request time and post-provision.
 
