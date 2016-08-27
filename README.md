@@ -19,18 +19,18 @@ Customize & Run all the published Docker .NET application templates and many oth
 
 **Table of Contents**  
 
-- [A Step by Step Guide for Dockerizing a .NET Application that Connects to SQLite, PostgreSQL and Microsoft SQL Server](#dchq---docker-java-example-)
-		- [.NET with Embedded-SQLite)](#3-tier-java-nginx--tomcat--mysql)
-		- [2-Tier .NET (Nginx-Embedded-SQLite)](#3-tier-java-nginx--jetty--mysql)
-		- [2-Tier .NET (Apache HTTP-Embedded-SQLite)](#3-tier-java-nginx--jboss--mysql)
-		- [2-Tier .NET with PostgreSQL](#2-tier-java-websphere--mysql)
-		- [3-Tier .NET (Nginx-.NET-PostgreSQL)](#3-tier-java-nginx--tomcat--postgresql)
-		- [3-Tier .NET (Apache HTTP-.NET-PostgreSQL)](#3-tier-java-nginx--jetty--postgresql)
-		- [.NET Connecting to MS SQL Server](#3-tier-java-nginx--jboss--postgresql)
-		- [2-Tier .NET (Nginx Connecting to MS SQL Server)](#2-tier-java-websphere--postgresql)
-		- [2-Tier .NET (Apache HTTP Connecting to MS SQL Server)](#3-tier-java-nginx--tomcat--oracle-xe)
-		- [Environment Variable Bindings Across Images](#invoking-a-plug-in-to-initialize-the-database-separately-on-a-3-tier-java-nginx--tomcat--mysql)
-		- [Plug-ins to Configure Web Servers and .NET Servers at Request Time & Post-Provision](#invoking-a-plug-in-to-initialize-the-database-separately-on-a-3-tier-java-nginx--tomcat--mysql)
+- [A Step by Step Guide for Dockerizing a .NET Application that Connects to SQLite, PostgreSQL and Microsoft SQL Server](#a-step-by-step-guide-for-dockerizing-a-net-application-that-connects-to-sqlite-postgresql-and-microsoft-sql-server)
+	- [.NET with Embedded-SQLite)](#net-with-embedded-sqlite)
+	- [2-Tier .NET (Nginx-Embedded-SQLite)](#2-tier-net-nginx-embedded-sqlite)
+	- [2-Tier .NET (Apache HTTP-Embedded-SQLite)](#2-tier-net-apache-http-embedded-sqlite)
+	- [2-Tier .NET with PostgreSQL](#2-tier-net-with-postgresql)
+	- [3-Tier .NET (Nginx-.NET-PostgreSQL)](#3-tier-net-nginx-net-postgresq)
+	- [3-Tier .NET (Apache HTTP-.NET-PostgreSQL)](#3-tier-net-apache-http-net-postgresql)
+	- [.NET Connecting to MS SQL Server](#net-connecting-to-ms-sql-server)
+	- [2-Tier .NET (Nginx Connecting to MS SQL Server)](#2-tier-net-nginx-connecting-to-ms-sql-server)
+	- [2-Tier .NET (Apache HTTP Connecting to MS SQL Server)](#2-tier-net-apache-http-connecting-to-ms-sql-server)
+	- [Environment Variable Bindings Across Images](#environment-variable-bindings-across-images)
+	- [Plug-ins to Configure Web Servers and .NET Servers at Request Time & Post-Provision](#plug-ins-to-configure-web-servers-and-net-servers-at-request-time--post-provision)
 
  
 
