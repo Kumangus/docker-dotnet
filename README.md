@@ -2,7 +2,7 @@
 <img src="http://www.hypergrid.com/wp-content/themes/hypergrid/img/logo.png" alt="" />
 </figure>
 
-DCHQ - Docker .NET Example 
+HyperForm - Docker .NET Example 
 ===========================
 
 This project includes the source code to a simple Microsoft .NET application called "Names Directory" that allows users to view, add and remove names stored on a connected database. 
