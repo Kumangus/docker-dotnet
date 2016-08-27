@@ -1,0 +1,64 @@
+﻿@model IEnumerable<NameDirectoryService.Models.NameDirectory>
+
+<!--  IEnumerable<NameDirectoryService.Models.NameDirectory>
+    -->
+
+@{
+    ViewData["Title"] = "Name Directory";
+    var item = new NameDirectoryService.Models.NameDirectory();
+}
+
+
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">First Name</label>
+        <div class="controls">
+            <input type="text" id="FirstName" name="FirstName" value='@item.FirstName' placeholder="First Name" required min="2" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">Last Name</label>
+        <div class="controls">
+            <input type="text" id="LastName" name="LastName" value='@item.LastName' placeholder="Last Name" required min="1"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <hr />
+        <div class="controls">
+@Html.ActionLink(
+  "Add Name",
+  "Add",           // controller action
+  "Home",        // controller
+  new { @item },         // action parameters aka route values
+  new { @class = "btn btn-primary" }// html attributes
+  ) 
+
+            @*<button type="button" class="btn btn-primary" ng-disabled="@string.IsNullOrEmpty(item.FirstName) || @string.IsNullOrEmpty(item.LastName)" ng-hide="editMode" ng-click="addNewName(name)">Add Name</button>
+            <button type="button" class="btn" ng-click="resetNamesForm()">Reset</button>*@
+        </div>
+    </div>
+</form>
+
+
+@*<input type="text" id="FirstName" name="FirstName" value='@item.FirstName'/>
+
+<input type="text" id="LastName" name="LastName" value='@item.LastName' />*@
+
+
+<h2>Blogs</h2>
+
+<p>
+    <a asp-controller="Home" asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+    </tr>
+    
+    <!--
+   
+        -->
+</table>
